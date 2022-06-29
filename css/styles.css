@@ -135,15 +135,16 @@ display: flex;
 align-items: center;
 }
 .header-cont-svg{
+align-items: center;
 margin-right: 10px;
 fill: var(--crew-icon-primary)
-
 }
 
 .header-cont-svg:hover,
 .header-cont-svg:focus {
-    background-color: var(--accent-txt-cl) ;
-    fill: var(--accent-txt-cl)
+    color: var(--accent-txt-cl);
+    fill: currentColor;
+    
 }
     
 /* (а) посилання в блоці нав */
@@ -160,8 +161,8 @@ fill: var(--crew-icon-primary)
 }
 
 
-.header-link:hover,
-.header-link:focus {
+ .header-link:hover,
+ .header-link:focus{
     color: var(--accent-txt-cl)
 }
 
