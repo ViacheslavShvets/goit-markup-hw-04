@@ -178,7 +178,7 @@ address {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('/image/img-bg/Img-fon-hero.jpg');
+    url('./image/img-bg/Img-fon-hero.webp'), url('./image/img-bg/Img-fon-hero.jpg');
   background-color: #2f303a;
   background-repeat: no-repeat;
   background-position: center;
