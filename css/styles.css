@@ -20,6 +20,10 @@
   --csrd-set-gap: 30px;
   --csrd-set-marg: 15px;
 }
+/* шабдлон */
+/* <svg width="" height="">
+            <use href=""></use>
+          </svg> */
 /* загальні властивості  */
 body {
   letter-spacing: 0.03em;
@@ -86,13 +90,13 @@ address {
 /* хедер початок */
 /* логотип в хедері */
 .header-logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
   font-family: var(--secondary-font);
   font-weight: 400;
   color: var(--black-txt-cl);
   font-size: 26px;
   line-height: 1.2px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo {
@@ -143,7 +147,8 @@ address {
 .header-cont {
   padding-top: 32px;
   padding-bottom: 32px;
-
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
@@ -154,12 +159,30 @@ address {
 .header-cont:focus {
   color: var(--accent-txt-cl);
 }
+.icon-cont {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.icon-cont:hover,
+.icon-cont:focus {
+  fill: currentColor;
+}
 
 /* сеrція герой */
 .hero {
-  background-color: var(--dark-bgr-cl);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background-color: #2f303a;
+  text-align: center;
+  padding: 200px 0;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('/image/img-bg/Img-fon-hero.webp'), url('/image/img-bg/Img-fon-hero.jpg');
+  background-color: #2f303a;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* заголовок в герой */
@@ -227,8 +250,23 @@ address {
 .main-list-item {
   width: 270px;
 }
-.main-list-item:not(:last-child) {
+.main-list-item,
+.icon-box-main :not(:last-child) {
   margin-right: 30px;
+}
+
+.icon-box-main {
+  display: flex;
+  content: '';
+  height: 120px;
+  width: 270px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
 }
 
 /* заголовоки в особливості */
@@ -316,6 +354,75 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
+/* іконки соц мереж */
+.team-social-icons {
+  display: flex;
+  height: 44px;
+  margin-top: 20px;
+  padding: 0;
+  justify-content: center;
+}
+.team-social-icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+.social-icon {
+  fill: currentColor;
+}
+.social-link-icon:hover,
+.social-link-icon:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+/* постійні кліенти */
+.text-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-icon-list {
+  display: flex;
+  font-size: 36px;
+  line-height: 1.16;
+  margin-top: 50px;
+  padding: 0;
+  text-align: center;
+}
+.clients-icon-item:not(last-child) {
+  margin-right: 30px;
+}
+.clients-icon-link {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+.clients-icon {
+  fill: currentColor;
+}
+.clients-icon-link:hover,
+.clients-icon-link:focus {
+  color: var(--accent-txt-cl);
+  border-color: var(--accent-txt-cl);
+}
+
 /* портфоліо початок */
 .portfolio-header {
   border: 1px solid #ececec;
@@ -325,6 +432,7 @@ address {
 /* кнопки в портфоліо */
 .filter-list {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -337,12 +445,13 @@ address {
   color: #212121;
   cursor: pointer;
   border: none;
-  margin-left: 8px;
+  padding: 6px 22px;
+  margin-right: 8px;
   background-color: var(--gray-bgr-cl);
   border-radius: 4px;
 }
-.btn-filter:not(:first-child) {
-  margin-left: 8px;
+.btn-filter:not:first-child {
+  margin-right: 8px;
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -350,6 +459,10 @@ address {
   color: var(--light-txt-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.btn-filter.active {
+  color: var(--primery-white-color);
+  background-color: var(--accent-color);
 }
 .cards {
   display: flex;
@@ -439,4 +552,43 @@ address {
 .footer-addr:focus {
   color: var(--accent-txt-cl);
 }
+
+/* section social footer */
+.footer-social-thumb {
+  margin-left: 70px;
+}
+.footer-social-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--light-txt-cl);
+  margin-bottom: 20px;
+}
+.footer-social-links {
+  display: flex;
+  height: 44px;
+  align-items: baseline;
+  padding: 0;
+  justify-content: center;
+}
+.footer-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--light-txt-cl);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-link:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-link-icon:hover,
+.footer-link-icon:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
 /* footer end */

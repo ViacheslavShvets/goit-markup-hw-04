@@ -25,7 +25,7 @@
 
 <body class="body">
   <!--шапка-->
-  <header class="header portfolio-header">
+  <header class="header">
     <div class="container main-nav">
       <nav class="header-nav">
         <a class="header-logo link" href=" ./index.html "><span class="logo">Web</span>Studio</a>
@@ -36,17 +36,21 @@
           <li class="header-list-item">
             <a class="header-link link" href=" ./portfolio.html ">Портфолио</a>
           </li>
-          <li class=" header-list-item ">
-            <a class=" header-link link " href=" # ">Контакты</a>
+          <li class="header-list-item">
+            <a class="header-link link" href=" # ">Контакты</a>
           </li>
         </ul>
       </nav>
-      <ul class=" header-list-cont list ">
+      <ul class="header-list-cont list">
         <li class="header-list-item">
-          <a class="header-cont link " href=" info@devstudio.com ">info@devstudio.com</a>
+          <a class="header-cont link" href=" info@devstudio.com "><svg class="icon-cont" width="16px" height="12px">
+              <use href="./image/icons.svg#icon-envelope-hover"></use>
+            </svg>info@devstudio.com</a>
         </li>
-        <li class=" header-list-item ">
-          <a class=" header-cont link " href=" +380961111111 "> +38 096 111 11 11 </a>
+        <li class=" header-list-item">
+          <a class="header-cont link" href=" +380961111111 "><svg class="icon-cont" width="10px" height="16px">
+              <use href="./image/icons.svg#icon-telepfone"></use>
+            </svg> +38 096 111 11 11 </a>
         </li>
       </ul>
     </div>
@@ -58,11 +62,11 @@
       <div class="container">
         <h1 class="visualli-hidden">мене тут нема</h1>
         <ul class="filter-list list">
-          <li><button class="btn-filter" type="button">Все</button></li>
-          <li><button class="btn-filter" type="button">Веб-сайты</button></li>
-          <li><button class="btn-filter" type="button">Приложения</button></li>
-          <li><button class="btn-filter" type="button">Дизайн</button></li>
-          <li><button class="btn-filter" type="button">Маркетинг</button></li>
+          <li class="btn-item"><button class="btn-filter" type="button">Все</button></li>
+          <li class="btn-item"><button class="btn-filter" type="button">Веб-сайты</button></li>
+          <li class="btn-item"><button class="btn-filter" type="button">Приложения</button></li>
+          <li class="btn-item"><button class="btn-filter" type="button">Дизайн</button></li>
+          <li class="btn-item"><button class="btn-filter" type="button">Маркетинг</button></li>
         </ul>
         <!--projects-->
 
@@ -144,7 +148,7 @@
   </main>
   <!--підвал-->
   <footer class="footer">
-    <div class="container">
+    <div class="container flex-group ">
       <div class="footer-box">
         <a href="./index.html" class="footer-logo link"><span class="lower-logo">Web</span>Studio</a>
         <address class="section-add">
@@ -165,6 +169,39 @@
 
           </ul>
         </address>
+      </div>
+      <div class="footer-social-thumb">
+        <h2 class="footer-social-title">присоединяйтесь</h2>
+        <ul class="footer-social-links list">
+          <li class="footer-social-link">
+            <a class="footer-link-icon" href="" aria-label="icon-instagram">
+              <svg class="social-icon" width="20px" height="20px">
+                <use href="./image/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-link">
+            <a class="footer-link-icon" href="" aria-label="icon-twitter">
+              <svg class="social-icon" width="20px" height="20px">
+                <use href="./image/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-link">
+            <a class="footer-link-icon" href="" aria-label="icon-facebook">
+              <svg class="social-icon" width="20px" height="20px">
+                <use href="./image/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-link">
+            <a class="footer-link-icon" href="" aria-label="icon-linkedin">
+              <svg class="social-icon" width="20px" height="20px">
+                <use href="./image/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
