@@ -15,6 +15,9 @@
   --dark-bgr-cl: #2f303a;
   --light-bgr-cl: #ffffff;
   --blue-but-cl: #188ce8;
+  /* шконки соц мереж */
+  --bg-color-icon: #2196f3;
+  --color-icon: #ffffff;
 
   /* змінні в сітці в портфоліо */
   --csrd-set-gap: 30px;
@@ -84,8 +87,8 @@ address {
 }
 
 /* підсвітка кнопки активної сторінки */
-.header-list .link.current {
-  color: var(--accent-txt-cl);
+.current :active {
+  color: #2196f3;
 }
 /* хедер початок */
 /* логотип в хедері */
@@ -287,7 +290,7 @@ address {
   line-height: 1.14;
   text-transform: uppercase;
 
-  -bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .upertitle {
@@ -380,8 +383,8 @@ address {
 }
 .social-link-icon:hover,
 .social-link-icon:focus {
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--bg-color-icon);
+  color: var(--color-icon);
 }
 
 /* постійні кліенти */
@@ -394,13 +397,8 @@ address {
 
 .clients-icon-list {
   display: flex;
-  font-size: 36px;
-  line-height: 1.16;
-  margin-top: 50px;
-  padding: 0;
-  text-align: center;
 }
-.clients-icon-item:not(last-child) {
+.clients-icon-item:not(:last-child) {
   margin-right: 30px;
 }
 .clients-icon-link {
@@ -426,7 +424,6 @@ address {
 /* портфоліо початок */
 .portfolio-header {
   border: 1px solid #ececec;
-  /* border-bottom: 1px ; */
 }
 
 /* кнопки в портфоліо */
@@ -450,7 +447,7 @@ address {
   background-color: var(--gray-bgr-cl);
   border-radius: 4px;
 }
-.btn-filter:not(first-child) {
+.btn-filter:not(:first-child) {
   margin-right: 8px;
 }
 .btn-filter:hover,
@@ -464,6 +461,10 @@ address {
   color: var(--primery-white-color);
   background-color: var(--accent-color);
 }
+
+.project-cards-link {
+  display: block;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -472,22 +473,19 @@ address {
 .project-list {
   flex-basis: calc((100% - var(--csrd-set-gap) * 3) / 3);
   margin: var(--csrd-set-marg);
-  border: 1px solid #eeeeee;
 }
 .project-cards-lin {
   display: flex;
 }
 
-.project-list:hover,
-.project-list:focus {
+.project-cards-link:hover,
+.project-cards-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-title {
-  text-align: left;
   padding: 20px 24px;
-  background-color: var(--light-bgr-cl);
   border: 1px solid #eeeeee;
   border-top: none;
 }
@@ -597,8 +595,8 @@ address {
 }
 .footer-link-icon:hover,
 .footer-link-icon:focus {
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--bg-color-icon);
+  color: var(--color-icon);
 }
 
 /* footer end */
